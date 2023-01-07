@@ -1,0 +1,68 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: README
+#+date: <2023-01-07 Sat>
+#+author: andreas
+#+email: andreas@gmail.com
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.1 (Org mode 9.6)
+#+cite_export:
+
+* Introduction
+
+This README serves as companion to the book "Think Python" [[file:~/Toolbox/Manuals/python/Think Python.pdf][PDF]].
+
+It is written in Emacs Org mode which provides several means to play
+with Python. Here a some basic commands using so called 'literal
+programming' with Org mode:
+
+- C-c C-x C-f :: Emphasize text
+- C-c C-l :: Insert hyperlink
+- C-c C-, :: Insert block structure, e.g. source blocks
+- C-c C-c :: Execute source block
+
+For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org Manual.pdf][Org Manual]].
+
+* Chapter 1: The Way of a Program
+
+** Exercise 1-1
+
+#+BEGIN_SRC python :results output
+  print("Hello World!")   # prints the string
+  # print "Hello World!"  # syntax error
+  # print(Hello World)    # syntax error
+  2++2                    # no output
+  print(2++2)             # prints 4
+  # 02                    # leading zeros are not permittet
+  # 2 3                   # invalid syntax
+#+END_SRC
+
+#+RESULTS:
+: Hello World!
+: 4
+
+** Exercise 1-2
+
+#+BEGIN_SRC python :results output
+  print(42*60 + 60)
+  print(10 / 1.61)
+  s = 10         # in km
+  t = 42*60 * 42 # in seconds
+  # pace in miles per min
+  pm = (s / 1.16) / (t / 60)
+  print(pm)
+  ph = pm * 60
+  print(ph)
+#+END_SRC
+
+#+RESULTS:
+: 2580
+: 6.211180124223602
+: 0.004887012276174838
+: 0.29322073657049025
+

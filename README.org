@@ -24,6 +24,7 @@ programming' with Org mode:
 - C-c C-l :: Insert hyperlink
 - C-c C-, :: Insert block structure, e.g. source blocks
 - C-c C-c :: Execute source block
+- C-c C-' :: Edit source example
 
 For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org Manual.pdf][Org Manual]].
 
@@ -64,4 +65,25 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 : 6.211180124223602
 : 0.004887012276174838
 : 0.29322073657049025
+
+* Chapter 2: Variables, Expressions and Statements
+
+** Exercise 2-1
+
+#+BEGIN_SRC python :results output
+  # 42 = n      # can't assign to literal
+  x = y = 1     # assigns 1 to y and x
+  print(x)
+  print(y)
+  x = y = 1;
+  print(x)
+  print(y)
+#+END_SRC
+
+#+RESULTS:
+: 1
+: 1
+: 1
+: 1
+
 

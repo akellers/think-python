@@ -162,3 +162,49 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
    : More spam
    : More spam
 
+** Exercise 3-3
+
+   #+BEGIN_SRC python :results output
+     def grid1h(n):
+	 s = ('+' + '-'*4)*n
+	 print(s, '+')
+
+     def grid1v(n):
+	 s = ('|' + ' '*4)*n
+	 print(s, '|')
+
+     def do_twice(f, n):
+	 f(n)
+	 f(n)
+
+     def do_four(f, n):
+	 do_twice(f, n)
+	 do_twice(f, n)
+
+     def grid1b(n):
+	 grid1h(n)
+	 do_four(grid1v, n)
+
+     # 2x2
+     do_twice(grid1b, 2)
+     grid1h(2)
+     # 4x4
+     # do_four(grid1b, 4)
+     # grid1h(4)
+   #+END_SRC
+
+   #+RESULTS:
+   #+begin_example
+   +----+---- +
+   |    |     |
+   |    |     |
+   |    |     |
+   |    |     |
+   +----+---- +
+   |    |     |
+   |    |     |
+   |    |     |
+   |    |     |
+   +----+---- +
+   #+end_example
+

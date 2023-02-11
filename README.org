@@ -135,3 +135,30 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
    :                                                                  Monty
    :                                                                Python!
 
+** Exercise 3-2
+
+   #+BEGIN_SRC python :results output
+     def do_twice(f, arg):
+	 f(arg)
+	 f(arg)
+
+     def do_four(f, arg):
+	 do_twice(f, arg)
+	 do_twice(f, arg)
+
+     def print_spam():
+	 print('Spam')
+
+     do_twice(print, 'Spam again')
+
+     do_four(print, 'More spam')
+   #+END_SRC
+
+   #+RESULTS:
+   : Spam again
+   : Spam again
+   : More spam
+   : More spam
+   : More spam
+   : More spam
+

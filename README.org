@@ -86,4 +86,35 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 : 1
 : 1
 
+** Exercise 2-2
+
+#+BEGIN_SRC python :results output
+  import math
+  r = 5
+  V = 4/3 * math.pi * r ** 3
+  s = "The volume of a sphere with radius %s is %g." % (r, V)
+  print(s)
+
+  price = 24.95
+  discount = 0.4
+  shipping_first = 3
+  shipping_more = 0.75
+  N = 60
+  total = (60 * price)*(1 - discount) + shipping_first + (N - 1)*shipping_more
+  s = "The total wholesale cost for %s copies is $%g." % (N, total)
+  print(s)
+
+  t1 = 6*60 + 52 # 6:52 am
+  p1 = (8*60 + 15)/60 # 1 mile at pace 8:15 per mile
+  p2 = (7*60 + 12)/60 # 3 miles at 7:12 per mile
+  t2 = t1 + p1 * 1.0 + p2 * 3
+  # s = "I'll return at %d:%d at home." % (t2 // 60, t2 % 60)
+  s = "I'll return at %d:%d at home." % divmod(t2, 60)
+  print(s)
+#+END_SRC
+
+#+RESULTS:
+: The volume of a sphere with radius 5 is 523.599.
+: The total wholesale cost for 60 copies is $945.45.
+: I'll return at 7:21 at home.
 

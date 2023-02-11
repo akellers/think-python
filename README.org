@@ -118,3 +118,20 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 : The total wholesale cost for 60 copies is $945.45.
 : I'll return at 7:21 at home.
 
+* Chapter 3: Functions
+
+** Exercise 3-1
+
+   #+BEGIN_SRC python :results output
+     def right_justify(s):
+	 n = len(str(s))
+	 print(" "*(70 - n) + str(s))
+
+     right_justify('Monty')
+     right_justify('Python!')
+   #+END_SRC
+
+   #+RESULTS:
+   :                                                                  Monty
+   :                                                                Python!
+

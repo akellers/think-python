@@ -243,3 +243,21 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
    : Years since Epoch: 53
    : Current Time: 17:28:18
 
+** Exercise 5-2
+
+   #+BEGIN_SRC python :results output
+     def check(a, b, c, n):
+	 if n > 2 and a^n + b^n == c^n:
+	    print("Holy smokes, fermat was wrong!")
+	 else:
+	    print("No, that doesn't work.")
+
+     n = int(input("n: "))
+     a = int(input("a: "))
+     b = int(input("b: "))
+     c = int(input("c: "))
+
+     check(a,b,c,n)
+   #+END_SRC
+
+   #+RESULTS:

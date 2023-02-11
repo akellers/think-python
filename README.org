@@ -212,3 +212,34 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 
   n/a due to missing turtle package
 
+* Chapter 5: Conditionals and Recursion
+
+** Exercise 5-1
+
+   #+BEGIN_SRC python :results output
+     import time
+
+     sec = int(time.time())
+     print("Seconds since Epoch: %d" % sec)
+     min = sec // 60
+     print("Minutes since Epoch: %d" % min)
+     hrs = min // 60
+     print("Hours since Epoch: %d" % hrs)
+     day = hrs // 24
+     print("Days since Epoch: %d" % day)
+     yrs = day // 365
+     print("Years since Epoch: %d" % yrs)
+
+     print("Current Time: %d:%d:%d" % ((1 + hrs % 24), (min % 60), (sec % 24)))
+
+
+   #+END_SRC
+
+   #+RESULTS:
+   : Seconds since Epoch: 1676046498
+   : Minutes since Epoch: 27934108
+   : Hours since Epoch: 465568
+   : Days since Epoch: 19398
+   : Years since Epoch: 53
+   : Current Time: 17:28:18
+

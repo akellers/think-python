@@ -262,3 +262,50 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
    #+END_SRC
 
    #+RESULTS:
+
+** Exercise 5-3
+
+   #+BEGIN_SRC python :results output
+     def is_triangle(a, b, c):
+	 if (a + b < c) or (a + c < b) or (b + c < a):
+	     ret = "No"
+	 else:
+	     ret = "Yes"
+	 return ret
+
+     for a in range(3):
+	 for b in range(3):
+	     for c in range(3):
+		 print("is_triangle(%d, %d, %d) = %s" % (a, b, c, is_triangle(a, b, c)))
+   #+END_SRC
+
+   #+RESULTS:
+   #+begin_example
+   is_triangle(0, 0, 0) = Yes
+   is_triangle(0, 0, 1) = No
+   is_triangle(0, 0, 2) = No
+   is_triangle(0, 1, 0) = No
+   is_triangle(0, 1, 1) = Yes
+   is_triangle(0, 1, 2) = No
+   is_triangle(0, 2, 0) = No
+   is_triangle(0, 2, 1) = No
+   is_triangle(0, 2, 2) = Yes
+   is_triangle(1, 0, 0) = No
+   is_triangle(1, 0, 1) = Yes
+   is_triangle(1, 0, 2) = No
+   is_triangle(1, 1, 0) = Yes
+   is_triangle(1, 1, 1) = Yes
+   is_triangle(1, 1, 2) = Yes
+   is_triangle(1, 2, 0) = No
+   is_triangle(1, 2, 1) = Yes
+   is_triangle(1, 2, 2) = Yes
+   is_triangle(2, 0, 0) = No
+   is_triangle(2, 0, 1) = No
+   is_triangle(2, 0, 2) = Yes
+   is_triangle(2, 1, 0) = No
+   is_triangle(2, 1, 1) = Yes
+   is_triangle(2, 1, 2) = Yes
+   is_triangle(2, 2, 0) = Yes
+   is_triangle(2, 2, 1) = Yes
+   is_triangle(2, 2, 2) = Yes
+   #+end_example

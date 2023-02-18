@@ -230,22 +230,23 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
      yrs = day // 365
      print("Years since Epoch: %d" % yrs)
 
-     print("Current Time: %d:%d:%d" % ((1 + hrs % 24), (min % 60), (sec % 24)))
-
-
+     print("Current Time: %02d:%02d:%02d" % ((1 + hrs % 24), (min % 60), (sec % 24)))
    #+END_SRC
 
    #+RESULTS:
-   : Seconds since Epoch: 1676046498
-   : Minutes since Epoch: 27934108
-   : Hours since Epoch: 465568
-   : Days since Epoch: 19398
+   : Seconds since Epoch: 1676384770
+   : Minutes since Epoch: 27939746
+   : Hours since Epoch: 465662
+   : Days since Epoch: 19402
    : Years since Epoch: 53
-   : Current Time: 17:28:18
+   : Current Time: 15:26:10
 
 ** Exercise 5-2
 
-   #+BEGIN_SRC python :results output
+   The following code can not be exexcuted via =C-c C-c=. Run Python
+   file [[file:src/exercise-5-2.py]] instead.
+
+   #+BEGIN_SRC python
      def check(a, b, c, n):
 	 if n > 2 and a^n + b^n == c^n:
 	    print("Holy smokes, fermat was wrong!")

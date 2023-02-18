@@ -309,3 +309,19 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
    is_triangle(2, 2, 1) = Yes
    is_triangle(2, 2, 2) = Yes
    #+end_example
+
+** Exercise 5-4
+
+   #+BEGIN_SRC python :results output
+     def recurse(n, s):
+	 if n == 0:
+	     print(s)
+	 else:
+	     recurse(n-1, n+s)
+
+     recurse(3, 0)
+
+   #+END_SRC
+
+   #+RESULTS:
+   : 6

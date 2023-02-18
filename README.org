@@ -325,3 +325,11 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 
    #+RESULTS:
    : 6
+
+** Exercise 5-5
+
+   Not applicable (requires module =turtle=)
+
+** Exercise 5-6
+
+   Not applicable (requires module =turtle=)

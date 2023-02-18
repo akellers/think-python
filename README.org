@@ -124,8 +124,8 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 
    #+BEGIN_SRC python :results output
      def right_justify(s):
-	 n = len(str(s))
-	 print(" "*(70 - n) + str(s))
+         n = len(str(s))
+         print(" "*(70 - n) + str(s))
 
      right_justify('Monty')
      right_justify('Python!')
@@ -139,15 +139,15 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 
    #+BEGIN_SRC python :results output
      def do_twice(f, arg):
-	 f(arg)
-	 f(arg)
+         f(arg)
+         f(arg)
 
      def do_four(f, arg):
-	 do_twice(f, arg)
-	 do_twice(f, arg)
+         do_twice(f, arg)
+         do_twice(f, arg)
 
      def print_spam():
-	 print('Spam')
+         print('Spam')
 
      do_twice(print, 'Spam again')
 
@@ -166,24 +166,24 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 
    #+BEGIN_SRC python :results output
      def grid1h(n):
-	 s = ('+' + '-'*4)*n
-	 print(s, '+')
+         s = ('+' + '-'*4)*n
+         print(s, '+')
 
      def grid1v(n):
-	 s = ('|' + ' '*4)*n
-	 print(s, '|')
+         s = ('|' + ' '*4)*n
+         print(s, '|')
 
      def do_twice(f, n):
-	 f(n)
-	 f(n)
+         f(n)
+         f(n)
 
      def do_four(f, n):
-	 do_twice(f, n)
-	 do_twice(f, n)
+         do_twice(f, n)
+         do_twice(f, n)
 
      def grid1b(n):
-	 grid1h(n)
-	 do_four(grid1v, n)
+         grid1h(n)
+         do_four(grid1v, n)
 
      # 2x2
      do_twice(grid1b, 2)
@@ -248,10 +248,10 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 
    #+BEGIN_SRC python
      def check(a, b, c, n):
-	 if n > 2 and a^n + b^n == c^n:
-	    print("Holy smokes, fermat was wrong!")
-	 else:
-	    print("No, that doesn't work.")
+         if n > 2 and a^n + b^n == c^n:
+            print("Holy smokes, fermat was wrong!")
+         else:
+            print("No, that doesn't work.")
 
      n = int(input("n: "))
      a = int(input("a: "))
@@ -267,16 +267,16 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 
    #+BEGIN_SRC python :results output
      def is_triangle(a, b, c):
-	 if (a + b < c) or (a + c < b) or (b + c < a):
-	     ret = "No"
-	 else:
-	     ret = "Yes"
-	 return ret
+         if (a + b < c) or (a + c < b) or (b + c < a):
+             ret = "No"
+         else:
+             ret = "Yes"
+         return ret
 
      for a in range(3):
-	 for b in range(3):
-	     for c in range(3):
-		 print("is_triangle(%d, %d, %d) = %s" % (a, b, c, is_triangle(a, b, c)))
+         for b in range(3):
+             for c in range(3):
+                 print("is_triangle(%d, %d, %d) = %s" % (a, b, c, is_triangle(a, b, c)))
    #+END_SRC
 
    #+RESULTS:
@@ -314,10 +314,10 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 
    #+BEGIN_SRC python :results output
      def recurse(n, s):
-	 if n == 0:
-	     print(s)
-	 else:
-	     recurse(n-1, n+s)
+         if n == 0:
+             print(s)
+         else:
+             recurse(n-1, n+s)
 
      recurse(3, 0)
 

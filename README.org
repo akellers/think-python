@@ -395,3 +395,102 @@ For further information about Org mode, see [[file:~/Toolbox/Manuals/tools/Org M
 
    #+RESULTS:
    : 3
+** Exercise 6-3
+
+   #+BEGIN_SRC python :results output
+     def first(word):
+         return word[0]
+
+     def last(word):
+         return word[-1]
+
+     def middle(word):
+         return word[1:-1]
+
+     print("First of 'Test':  ", first("Test"))
+     print("Last of 'Test':   ", last("Test"))
+     print("Middle of 'Test': ", middle("Test"))
+     # print("First of '':      ", first(""))
+     # print("Last of '':       ", last(""))
+     print("Middle of '':     ", middle(""))
+     print("First of 'a':     ", first("a"))
+     print("Last of 'a':      ", last("a"))
+     print("Middle of 'a':    ", middle("a"))
+
+     def is_palindrome(string):
+         if (len(string)) <= 1:
+             return True
+         else:
+             return (first(string) == last(string) and is_palindrome(middle(string)))
+
+     print("CABBA is palindrome: ", is_palindrome("CABBA"))
+     print("ABBAC is palindrome: ", is_palindrome("ABBAC"))
+     print("ABBA is palindrome:  ", is_palindrome("ABBA"))
+     print("ABA is palindrome:   ", is_palindrome("ABA"))
+     print("AB is palindrome:    ", is_palindrome("AB"))
+     print("A is palindrome:     ", is_palindrome("A"))
+   #+END_SRC
+
+   #+RESULTS:
+   #+begin_example
+   First of 'Test':   T
+   Last of 'Test':    t
+   Middle of 'Test':  es
+   Middle of '':
+   First of 'a':      a
+   Last of 'a':       a
+   Middle of 'a':
+   CABBA is palindrome:  False
+   ABBAC is palindrome:  False
+   ABBA is palindrome:   True
+   ABA is palindrome:    True
+   AB is palindrome:     False
+   A is palindrome:      True
+   #+end_example
+
+** Exercise 6-4
+
+   #+BEGIN_SRC python :results output
+     def gcd(a, b):
+         if not (isinstance(a, int) and isinstance(b, int)):
+             print('The GCD is only defined for integers!')
+             return None
+         if a == 0:
+             return abs(b)
+         elif b == 0:
+             return abs(a)
+         else:
+             r = a % b
+             return gcd(b, r)
+
+     a = 6; b = 9; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a = 0; b = 9; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a = 4; b = 0; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a = 4; b = 0; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a = 4; b = 0; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a = 0; b = 0; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a =-6; b = 9; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a = 0; b =-9; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a = 4; b = 0; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a = 4; b = 0; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a = 4; b =-4; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+     a =-4; b = 4; print("gcd(%s, %s) = %s" % (a, b, gcd(a, b)))
+   #+END_SRC
+
+   #+RESULTS:
+   #+begin_example
+   gcd(6, 9) = 3
+   gcd(0, 9) = 9
+   gcd(4, 0) = 4
+   gcd(4, 0) = 4
+   gcd(4, 0) = 4
+   gcd(0, 0) = 0
+   gcd(-6, 9) = 3
+   gcd(0, -9) = 9
+   gcd(4, 0) = 4
+   gcd(4, 0) = 4
+   gcd(4, -4) = 4
+   gcd(-4, 4) = 4
+   #+end_example
+
+* Chapter 7: Iteration
